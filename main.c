@@ -5,11 +5,13 @@
 #include "binary_search/binary_search.c"
 #include "bubble_sort/bubble_sort.c"
 #include "selection_sort/selection_sort.c"
+#include "insertion_sort/insertion_sort.c"
 
 void test_linear_search(list*);
 void test_binary_search(list*);
 void test_bubble_sort(list*);
 void test_selection_sort(list*);
+void test_insertion_sort(list*);
 
 int main() {
 
@@ -25,6 +27,7 @@ int main() {
     test_binary_search(list);
     test_bubble_sort(list);
     test_selection_sort(list);
+    test_insertion_sort(list);
 }
 
 void test_bubble_sort(list *list) {
@@ -41,6 +44,15 @@ void test_selection_sort(list *list) {
     selection_sort(list);
     show_list(list);
 }
+
+void test_insertion_sort(list *list) {
+
+    printf("insertion sort\n");
+
+    insertion_sort(list);
+    show_list(list);
+}
+
 
 void test_binary_search(list *list) {
 
